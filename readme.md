@@ -16,9 +16,13 @@ php artisan serve
 
 ##Testing
 Some simple tests have been created to test the backend api.
+
 >/api/products
+
 This url returns all the products in the database
+
 >/api/product/{id}
+
 This url returns the product using the url
 
 You can test the project using :
