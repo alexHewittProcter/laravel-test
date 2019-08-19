@@ -72766,6 +72766,7 @@ function (_Component) {
   _createClass(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      //Set basket
       var basket = this.state.cookies.get('basket');
 
       if (basket == null) {
@@ -72842,6 +72843,7 @@ function (_Component) {
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Basket_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
             basket: _this2.state.basket,
+            basketTotal: _this2.state.basketTotal,
             removeProductFromCart: _this2.removeProductFromCart
           });
         }
@@ -72930,7 +72932,7 @@ function (_Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PageHeader__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: "Basket"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Total :\xA3", this.props.basketTotal), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "list-group"
       }, this.props.basket.map(function (data, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductItem__WEBPACK_IMPORTED_MODULE_2__["default"], {

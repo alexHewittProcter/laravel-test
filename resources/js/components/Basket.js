@@ -13,6 +13,7 @@ export default class Basket extends Component {
         return (
             <div>
                 <PageHeader title='Basket'/>
+                <h3>Total :£{this.props.basketTotal}</h3>
                 <ul className='list-group'>
                     {this.props.basket.map((data,index) => {
                         return (<ProductItem key={index} product={data} options={options(data.id,index)}/>);

@@ -14,6 +14,7 @@ export default class App extends Component {
         this.removeProductFromCart = this.removeProductFromCart.bind(this);
     }
     componentDidMount() {
+        //Set basket
         let basket = this.state.cookies.get('basket');
         if(basket == null) {
             basket = [];
@@ -51,7 +52,7 @@ export default class App extends Component {
                 <div className="container">
                     <Header basketTotal={this.state.basketTotal} />
                     <Switch>
-                        <Route path='/basket' render={() => <Basket basket={this.state.basket} removeProductFromCart={this.removeProductFromCart}/>}/>
+                        <Route path='/basket' render={() => <Basket basket={this.state.basket} basketTotal={this.state.basketTotal} removeProductFromCart={this.removeProductFromCart}/>}/>
                         <Route path='/' render={() => <ProductList addProductToCart={this.addProductToCart} />} />
                     </Switch>
                 </div>
