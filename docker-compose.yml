@@ -1,0 +1,12 @@
+# Use root/example as user/password credentials
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    # command: --default-authentication-plugin=mysql_native_password
+    command: --explicit_defaults_for_timestamp
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
