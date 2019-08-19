@@ -72788,6 +72788,7 @@ function (_Component) {
   }, {
     key: "addProductToCart",
     value: function addProductToCart(id, title, price) {
+      //Add item to basked
       var newBasket = this.state.basket;
       newBasket.push({
         id: id,
@@ -72920,6 +72921,7 @@ function (_Component) {
     value: function render() {
       var _this = this;
 
+      //Create a function for building the options for button
       var options = function options(id, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
           title: "Remove from cart",
@@ -73051,7 +73053,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-
+ //A simple header with styling for top of pages
 
 var PageHeader =
 /*#__PURE__*/
@@ -73110,7 +73112,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-
+ //A styles button for use in the ProductItem
 
 var ProductButton =
 /*#__PURE__*/
@@ -73171,7 +73173,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-
+ //Shows the product details in a list
 
 var ProductItem =
 /*#__PURE__*/
@@ -73287,12 +73289,11 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      var products = this.state.products;
       return React__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, React__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PageHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
         title: "Products"
       }), React__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "list-group"
-      }, products.map(function (data, index) {
+      }, this.state.products.map(function (data, index) {
         return React__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
           key: index,
           product: data,

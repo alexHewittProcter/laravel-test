@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+//Shows the product details in a list
 export default class ProductItem extends Component {
     render() {
         return (

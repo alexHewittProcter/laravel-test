@@ -23,6 +23,7 @@ export default class App extends Component {
         this.setState((state,props) => ({basket:basket,basketTotal:total}));
     }
     addProductToCart(id,title,price) {
+        //Add item to basked
         let newBasket = this.state.basket;
         newBasket.push({id:id,title:title,price:price});
         this.setState((state,props) => ({

@@ -5,6 +5,7 @@ import ProductButton from './ProductButton';
 
 export default class Basket extends Component {
     render() {
+        //Create a function for building the options for button
         const options = (id,index) => {
             return (
                 <ProductButton title='Remove from cart' status='danger' onClick={() => {this.props.removeProductFromCart(id,index)}} />

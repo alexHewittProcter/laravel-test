@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+//A styles button for use in the ProductItem
 export default class ProductButton extends Component {
     render() {
         return (

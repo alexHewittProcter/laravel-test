@@ -19,12 +19,11 @@ export default class ProductList extends Component {
             .then(data => this.setState({products:data}));
     }
     render() {
-        const products = this.state.products;
         return (
             <div>
                 <PageHeader title="Products"/>
                 <ul className='list-group'>
-                    {products.map((data,index) => <ProductItem key={index} product={data} options={<ProductButton title='Add to cart' status='success' onClick={() => this.props.addProductToCart(data.id,data.title,data.price)}/>} />)}
+                    {this.state.products.map((data,index) => <ProductItem key={index} product={data} options={<ProductButton title='Add to cart' status='success' onClick={() => this.props.addProductToCart(data.id,data.title,data.price)}/>} />)}
                 </ul>
             </div>
         );

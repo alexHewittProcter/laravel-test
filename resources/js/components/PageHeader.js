@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+//A simple header with styling for top of pages
 export default class PageHeader extends Component {
     render() {
         return (
